@@ -61,6 +61,7 @@ export default class TodoList extends Component {
 
     return (
       <div>
+        To-Do List
         <TodoForm onSubmit={this.addTodo} />
         <div>
           <button onClick={() => this.updateTodoToDisplay("all")}>All</button>
@@ -75,7 +76,6 @@ export default class TodoList extends Component {
           Todos left :{" "}
           {this.state.todos.filter((todo) => !todo.complete).length}
         </div>
-
         {todos.map((todo) => (
           <Todo
             key={todo.id}
